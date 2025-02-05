@@ -109,25 +109,29 @@ class StudentController extends Controller
      * Show the form for editing the specified resource.
      */
     public function edit(Student $student)
-    {
-        //
-    }
+{
+    return view('students.edit', compact('student'));
+}
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Student $student)
-    {
-        //
-    }
+public function update(Request $request, Student $student)
+{
+    $validated = $request->validate([
+        'name' => 'required|string|max:255',
+        'semester' => 'required|string|max:255',
+        'course' => 'required|string|max:255',
+        'scholarship_name' => 'required|string|max:255'
+    ]);
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Student $student)
-    {
-        //
-    }
+    $student->update($validated);
+
+    return redirect()->route('students.index')->with('success', 'Student updated successfully!');
+}
+
+public function destroy(Student $student)
+{
+    $student->delete();
+    return redirect()->route('students.index')->with('success', 'Student deleted successfully!');
+}
 
     public function exportCSV(Request $request)
 {

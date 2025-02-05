@@ -78,6 +78,13 @@ Route::get('/students/export-csv', [StudentController::class, 'exportCSV'])
 Route::get('/students/export-xlsx', [StudentController::class, 'exportXLSX'])
      ->name('students.export.xlsx');
 
+// Edit/Update
+Route::get ('students/{student}/edit', [StudentController::class, 'edit'])->name('students.edit');
+Route::put('/students/{student}', [StudentController::class, 'update'])->name('students.update');
+
+//Delete
+Route::delete('/students/{student}', [StudentController::class, 'destroy'])->name('students.destroy');
+
 });
 
 

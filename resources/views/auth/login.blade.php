@@ -20,6 +20,10 @@
             <form class="space-y-6" method="POST" action="{{ route('login') }}">
                 @csrf
 
+<!--DUMMY-->
+
+
+
                 <!-- Email Field -->
                 <div class="group relative">
                     <input 
@@ -27,6 +31,7 @@
                         name="email" 
                         type="email" 
                         required
+                        
                         class="block w-full px-4 pt-5 pb-1 rounded-lg bg-white/50 border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
                     />
                     <label 

@@ -14,13 +14,9 @@
                 <i class="fas fa-plus mr-2"></i> Add New Student
             </a>
             
-            <a href="{{ route('students.export.csv', request()->query()) }}" 
-               class="inline-flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors duration-200">
-                <i class="fas fa-download mr-2"></i> CSV
-            </a>
             <a href="{{ route('students.export.xlsx', request()->query()) }}" 
                class="inline-flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors duration-200">
-                <i class="fas fa-download mr-2"></i> XLSX
+                <i class="fas fa-download mr-2"></i> EXCEL
             </a>
             
             <a href="{{ route('students.export.pdf', request()->query()) }}" 
@@ -159,16 +155,25 @@
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ $student->course }}</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ $student->scholarship_name }}</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                    <div class="flex space-x-2">
-                                        <a href="#" 
-                                           class="inline-flex items-center px-3 py-1.5 bg-yellow-500 hover:bg-yellow-600 text-white rounded-md transition-colors duration-200">
-                                            <i class="fas fa-edit"></i>
-                                        </a>
-                                        <button class="inline-flex items-center px-3 py-1.5 bg-red-500 hover:bg-red-600 text-white rounded-md transition-colors duration-200">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </div>
-                                </td>
+    <div class="flex space-x-2">
+        <!-- Edit Button -->
+        <a href="{{ route('students.edit', $student) }}" 
+           class="inline-flex items-center px-3 py-1.5 bg-yellow-500 hover:bg-yellow-600 text-white rounded-md transition-colors duration-200">
+            <i class="fas fa-edit"></i>
+        </a>
+        
+        <!-- Delete Form -->
+        <form action="{{ route('students.destroy', $student) }}" method="POST" 
+              onsubmit="return confirm('Are you sure you want to delete this student?');">
+            @csrf
+            @method('DELETE')
+            <button type="submit" 
+                    class="inline-flex items-center px-3 py-1.5 bg-red-500 hover:bg-red-600 text-white rounded-md transition-colors duration-200">
+                <i class="fas fa-trash"></i>
+            </button>
+        </form>
+    </div>
+</td>
                             </tr>
                         @endforeach
                     </tbody>

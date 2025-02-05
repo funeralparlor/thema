@@ -9,7 +9,7 @@
 </head>
 <body class="bg-gray-50">
     <!-- Navbar -->
-    <nav class="fixed w-full bg-white/80 backdrop-blur-sm shadow-sm z-50">
+    <nav class="fixed w-full bg-black backdrop-blur-sm shadow-sm z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
@@ -20,8 +20,8 @@
         alt="BulSU Logo" 
         class="h-10 w-10"
     />
-    <span class="text-2xl font-bold text-black-800">
-        <a href="/" class="text-black-600 hover:text-blue-700 transition-colors font-medium">
+    <span class="text-2xl font-bold text-white">
+        <a href="/" class="text-black-600 hover:text-red-700 transition-colors font-medium">
             BulSU | Scholarship Office
         </a>
     </span>
@@ -32,7 +32,7 @@
                     @auth
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <button type="submit" class="text-gray-600 hover:text-blue-700 transition-colors font-medium">
+                        <button type="submit" class="text-white/80 hover:text-blue-700 transition-colors font-medium">
                             Log Out
                         </button>
                     </form>
