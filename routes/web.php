@@ -3,6 +3,7 @@
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
 
 // Landing Page
 Route::get('/', function () {
@@ -84,6 +85,11 @@ Route::put('/students/{student}', [StudentController::class, 'update'])->name('s
 
 //Delete
 Route::delete('/students/{student}', [StudentController::class, 'destroy'])->name('students.destroy');
+
+//dashboard
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+
 
 });
 

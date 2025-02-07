@@ -1,15 +1,24 @@
 <?php return array(
     'root' => array(
         'name' => 'laravel/laravel',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => 'c8f888b965052ab3eedeec1d688cc9cef517eaaa',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
+        'almasaeed2010/adminlte' => array(
+            'pretty_version' => 'v3.2.0',
+            'version' => '3.2.0.0',
+            'reference' => 'bd4d9c72931f1dd28601b6bfb387554a381ad540',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../almasaeed2010/adminlte',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'barryvdh/laravel-dompdf' => array(
             'pretty_version' => 'v3.1.0',
             'version' => '3.1.0.0',
@@ -409,6 +418,15 @@
                 0 => 'v10.48.27',
             ),
         ),
+        'jeroennoten/laravel-adminlte' => array(
+            'pretty_version' => 'v3.14.3',
+            'version' => '3.14.3.0',
+            'reference' => '76b776f86ba70431cd2acb174caf31cb6559c67a',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../jeroennoten/laravel-adminlte',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'kodova/hamcrest-php' => array(
             'dev_requirement' => true,
             'replaced' => array(
@@ -425,9 +443,9 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => 'c8f888b965052ab3eedeec1d688cc9cef517eaaa',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

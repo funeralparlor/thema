@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite('resources/css/app.css')
     <title>@yield('title') - BulSU Dashboard</title>
+   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </head>
 <body class="bg-gray-50">
+
+
+
+
+
     <!-- Navbar -->
     <nav class="fixed w-full bg-black backdrop-blur-sm shadow-sm z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -112,5 +118,7 @@
             @apply opacity-50 cursor-not-allowed;
         }
     </style>
+    <!-- AdminLTE JS -->
+    <script src="{{ asset('vendor/adminlte/dist/js/adminlte.min.js') }}"></script>
 </body>
 </html>
